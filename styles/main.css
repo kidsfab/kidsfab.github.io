@@ -29,6 +29,7 @@ body{
   padding: 0;
   position: absolute;
   top: 0;
+  padding-top: 10px;
 }
 .topheader h1 a{
   color: #666f77;
@@ -88,6 +89,13 @@ body{
     padding: 3em 2em;
     
 }
+.m-white{
+	background: #e1e1e1;
+}
+.m-white:hover{
+	background: #ccc;
+
+}
 .box.m-10{
 	height: 15em;
 }
@@ -109,6 +117,13 @@ body{
 
 .icon > .label {
 	display: none;
+}
+.socials a{
+	margin-left: 20px;
+	color: #999;
+}
+.socials a:hover{
+	color: #0FA0CE
 }
 
 .icon.major {
