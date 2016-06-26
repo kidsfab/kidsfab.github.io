@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta name="viewport" content="user-scalable=yes,initial-scale=1">
+  
+  	<title>Arduino для "Знатока" - SnapBrain</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="Arduino-модель для конструктора Знаток под названием SnapBrain">
+		<meta name="keywords" content="arduino, snap, знаток">
+
+    <script src="scripts/zepto.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="only screen and (min-width:640px)">
+    <link rel="stylesheet" type="text/css" href="styles/phablet.css" media="only screen and (min-width:800px)">
+    <link rel="stylesheet" type="text/css" href="styles/tablet.css" media="only screen and (min-width:1024px)">
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width:1200px)">
+    <link rel="stylesheet" type="text/css" href="styles/widescreen.css" media="only screen and (min-width:1600px)">
+    
+     
+		
+    <script>
+          var submitted=false;
+    </script> 
+</head>
+<body >
+    <div>
+		<header  class="topheader">
+        <h1><a href="#">SnapBrain</a></h1>
+				<nav id="nav">
+					<a href="#info">Общая информация</a>
+						<a href="#one">Методические пособия</a>
+						<a href="#form">Форма заказа</a>
+					
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner" >
+          <div class="container">
+					<div class="row">
+            <div class="two-thirds column">
+              <h2>SnapBrain это Arduino для "Знатока"</h2>
+              <p>Это уникальная в своем роде плата расширения для электромеханического конструктора, которая позволяет добавить программируемую логику к схемам собираемым на "Знатоке"</p>
+              <div>
+                <a href="#form" class="button big special">Заказать</a>
+                <a href="#info" class="button big alt">Узнать поподробнее</a>
+              </div>
+            </div>
+            <div class="one-third column">
+                   <img sizes="(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+											  srcset="images/snapbrain-200.jpg 200w, images/snapbrain-200.jpg 400w, images/snapbrain-400.jpg 800w,images/snapbrain.jpg 1600w"
+											  src="images/snapbrain-200.jpg" 
+											  alt="Snapbrain">
+          </div>
+          </div>
+				</div>
+			</section>
+<!-- Three -->
+		<section id="info" class="container wrapper style1">
+    	<header class="row ">
+				<h2 class="twelve columns">Общая информация</h2>
+			</header>
+			<div class="row">
+
+				
+						<article class="nine columns">
+							<h2>Arduino для "Знатока"</h2>
+
+							<img sizes="(max-width: 30em) 100vw,
+										(max-width: 50em) 50vw,
+										calc(50vw - 1px)"
+								srcset="images/in-scheme-small.jpg 200w,
+										images/in-scheme-medium.jpg 400w,
+										images/in-scheme-big.jpg 800w,
+										images/sb3.jpg 1600w"
+								src="images/in-scheme-big.jpg" alt="Snapbrain in scheme">
+							
+							<p>Работая с конструктором "Знаток" в кружке робототехники <a href="http://www.kidsfab.ru/">KidsFab</a>, мы поняли что что конструктору не хватает "мозгов", а точнее платы с программируемым микроконтроллером на котором дети смогли бы писать простые программы, так как они это делают на Arduino и <a href="http://s4a.cat/">Scratch</a>. И мы разработали SnapBrain - 9 портовый модуль для конструктора "Знаток"! Данный модуль предназначен для подключения Arduino Nano к конструктору “Знаток” и дальнейшего управления выводами Arduino с помощью Snap4Arduino. Так же мы разработали методические указания и примеры того что можно сделать с SnapBrain.</p>
+						</article>
+
+						<section class="three columns">
+							<h3>На лицевой панели доступны следующие выводы</h3>
+							<ul>
+								<li>D3 - цифровой пин, обеспечивает ШИМ;
+								
+								</li>
+								<li>
+								D5 - цифровой пин, обеспечивает ШИМ;
+								
+								 </li>
+								<li>
+								D6 - цифровой пин, обеспечивает ШИМ;
+								 </li>
+								<li>
+								D9 - цифровой пин, обеспечивает ШИМ;
+								 </li>
+								<li>
+								A2 - аналоговый вывод; 
+								 </li>
+								<li>
+								
+								A5 - аналоговый вывод;
+								</li>
+								<li>
+								5V - источник напряжения 5В;
+								
+								 </li>
+								 <li>VIN - вывод, для подачи питания для Arduino от внешнего источника (батарейный блок).</li>
+								<li>
+								
+								
+								RX, TX для подключения bluetooth </li>
+							</ul>
+							
+							
+						</section>
+						<hr>
+						<section>
+							<h3>Мы использовали:</h3>
+							<ul class="alt">
+								<li><a href="http://s4a.cat/snap/">Snap for Arduino</a></li>
+								<li><a href="https://www.arduino.cc/en/Main/ArduinoBoardNano">Arduino Nano</a></li>
+								<li><a href="https://en.wikipedia.org/wiki/Snap_Circuits">Конструктор "Знаток"</a></li>
+							</ul>
+						</section>
+					</div>
+					
+				</div>
+			</div>
+		</section>	
+
+		<!-- One -->
+		<section id="one" class="wrapper style2">
+			<div class="container">
+				<header class="major row">
+					<h2 class="twelve columns">Методические пособия</h2>
+					<p class="twelve columns">В этом разделе перечислены методические пособия по сборке схем использующих SnapBrain</p>
+				</header>
+
+					<div class="row">
+						<div class="three columns">
+							<section class="special box m-10 text-center">
+								<i class="icon fa-plug major"></i>
+								<h3>Введение</h3>
+								<p>Первичное подключение и проверка модуля SnapBrain.</p>
+							</section>
+						</div>
+						<div class="three columns text-center">
+							<section class="special box m-10">
+								<i class="icon fa-adjust major"></i>
+								<h3>Светодиод</h3>
+								<p>Програмное управление светодиодом через SnapBrain.</p>
+							</section>
+						</div>
+						<div class="three columns text-center">
+							<section class="special box m-10">
+								<i class="icon fa-keyboard-o major"></i>
+								<h3>Клавиатура</h3>
+								<p>Подключение кнопок, светодиодов и создание простейшей клавиатуры.</p>
+							</section>
+						</div>
+           				<div class="three columns text-center">
+							<section class="special box m-10">
+								<i class="icon fa-car major"></i>
+								<h3>Машинка</h3>
+								<p>Программирование движения электромтора.</p>
+							</section>
+						</div>
+ 
+					</div>
+				</div>
+			</section>
+			
+		<!-- Two -->
+		
+
+			
+	<section id="form" class="container wrapper style1">
+  	<header class="major row">
+    	<div class="tvelwe columns">
+				<h2>Форма заказа</h2>
+				<p>Мы только начали выпускать SnapBrain и количество моделей ограничено, а на их выпуск нужно время. Поэтому мы просим вас оставить свои контактные данные, что бы иметь представление сколько устройств нам нужно будет произвести и как с вами связаться.</p>
+			</div>
+		</header>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
+		<div class="row">
+    	<div class="six columns">
+      	<h2>Итак, самое главное, цена: 5000 рублей.</h2>
+		    <p>За эти деньги вы получите: </p>
+		  <ol>
+		  	<li>Полностью совместимое с конструктором "Знаток" устройство SnapBrain</li>
+		    <li>Инструкцию по использованию и набор методический пособий</li>
+		    <li>Техническую поддержку в течении года</li>
+		  </ol>
+		  <p>По желанию мы можем включить в набор провод microUSB. Мы работаем над интеграцией Bluetooth устройства в модуль и надеемся отказаться от проводов.</p>
+		  <p>Если вас не устраивает цена или есть какие-либо дополнительные пожелания, напишите это в форме обратно связи и мы обязательно учтем ваши пожелания.</p>
+		  <div class="image fit">
+		  	<img sizes="(max-width: 30em) 100vw,(max-width: 50em) 50vw,calc(50vw - 1px)"
+						 srcset="images/sb2.jpg 200w,images/sb2.jpg 400w, images/sb2.jpg 800w, images/sb2.jpg 1600w"
+						 src="images/sb2.jpg" alt="Snapbrain in scheme">
+		  </div>
+		</div>
+		<div class="six columns">
+			<form action="https://docs.google.com/forms/d/1aXhoA0lRXqG8SKWV2KTZQlCV369aTNPk-BvYNGf8x1w/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;" class="special box">
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="ss-form-entry">
+							<label class="ss-q-item-label" for="entry_933273675">
+								<div class="ss-q-title">Имя</div>	
+							</label>
+							<input type="text" name="entry.933273675" value="" class="ss-q-short" id="entry_933273675" dir="auto" placeholder="Имя Например:Андрей Ершов " aria-required="true" required="" title="">
+						</div>
+					</div>
+				</div> 
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="ss-form-entry">
+							<label class="ss-q-item-label" for="entry_1073907767">
+								<div class="ss-q-title">Электронная почта</div>
+							</label>
+							<input type="text" name="entry.1073907767" value="" class="ss-q-short" id="entry_1073907767" dir="auto" placeholder="Например: a.ershov@mail.ru " aria-required="true" required title="">
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="ss-form-entry">
+							<label class="ss-q-item-label" for="entry_680455446"><div class="ss-q-title">Телефон</div></label>
+							<input type="text" name="entry.680455446" value="" class="ss-q-short" id="entry_680455446" dir="auto" placeholder="Например: +79111234567 " aria-required="true" required="" title="">
+						
+						</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+						<div dir="auto" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+						<label class="ss-q-item-label" for="entry_125469407"><div class="ss-q-title">Комментарий
+						</div>
+						<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+						<textarea name="entry.125469407" rows="10" cols="10" class="ss-q-long" id="entry_125469407" dir="auto" placeholder="Комментарий Например: я сейчас не готов купить, но хотел бы что бы вы со мной связались когда будет готов Bluetooth интерфейс "></textarea>
+						
+						</div>
+						</div>
+						</div> 
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
+								<label class="ss-q-item-label" for="entry_1184863084"><div class="ss-q-title">Предпочитаемый способ оплаты
+							</div>
+							<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+								<select name="entry.1184863084" id="entry_1184863084" aria-label="Предпочитаемый способ оплаты  ">
+									<option value="Наличными" selected="">Наличными</option> 
+									<option value="Банковским переводом">Банковским переводом</option> 
+									<option value="Яндекс.Деньги">Яндекс.Деньги</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="draftResponse" value="[,,&quot;-7597076604444959432&quot;]">
+					<input type="hidden" name="pageHistory" value="0">
+					<input type="hidden" name="fbzx" value="-7597076604444959432">
+					<div class="ss-item ss-navigate">
+						<input type="submit" name="submit" value="Отправить" id="ss-submit" class="jfk-button jfk-button-action ">
+					</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+      	<section id="two" class=" wrapper style2">
+			<div class="container">
+				<header class="major row">
+					<h2 class="twelve columns">Создатели</h2>
+					<p></p>
+				</header>
+
+				<div class="row">
+					<div class="six columns">
+						<section class="special">
+							<a href="#" class="image fit"><img src="images/dima.jpg" alt=""></a>
+							<h3>Дмитрий Спивак</h3>
+							<p>Директора KidsFab, идейный руководителя и автор SnapBrain.</p>
+							<a href="mailto:spivak.dm@gmail.com" class="button alt">Задать вопрос</a>
+							
+						</section>
+					</div>
+					<div class="six columns">
+						<section class="special">
+							<a href="#" class="image fit"><img src="images/gleb.jpg" alt=""></a>
+							<h3>Глеб Свечников</h3>
+							<p>Продвижение продукта, создание и оформление методических пособий.</p>
+							<a href="mailto:gleb.svechnikov@gmail.com" class="button alt">По вопросам продвижения</a>
+							
+						</section>
+					</div>
+				</div>
+				</div>
+			</section>
+	<footer id="footer" >
+	<div class="container">
+			<div class="row double ">
+	
+				<div class="six columns">
+					<h2>Как нас поддержать?</h2>
+					<p>Если вам понравилось что мы делаем, вы можете нас поддержать рублем и словом. Вы можете вступить в наше сообщество, рассказать о SnapBrain друзьям и/или перевести нам на Яндекс.Деньги</p>
+					<nav>
+						<a href="https://vk.com/kidsfab" class="icon fa-vk"><span class="label">VK</span></a>
+						<a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a>
+						<a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a>
+						<a href="#" class="icon fa-youtube"><span class="label">LinkedIn</span></a>
+					</nav>
+				</div>
+	 <div class="six columns">
+	  <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=41001344326985&amp;quickpay=shop&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;writer=buyer&amp;targets-hint=&amp;default-sum=&amp;button-text=04&amp;successURL=" width="450" height="194"></iframe>
+	</div>
+			</div>
+	
+			<div class="legals">
+				<span>© SnapBrain. Санкт-Петербург, 2016 год.</span> | 
+				<span>Сайт сделан с помощью : <a href="https://templated.co/ion">Templated: ION</a></span>
+				
+			</div>
+			</div>
+	
+	</footer>
+
+	
+
+</body>
+</html>
