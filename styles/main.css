@@ -17,7 +17,7 @@ body{
   top: 0;
   width: 100%;
   z-index: 10000;
-  box-shadow: 0 0 .1em 0 rgba(0,0,0,.25)
+  box-shadow: 0 0 .3em 0 rgba(0,0,0,.7)
 }
 .topheader h1{
   color: #666f77;
@@ -60,12 +60,12 @@ body{
 }
 
 #banner .container{
-  background: rgba(0,0,0,0.4);
-  padding-top: 30px;
+  background: rgba(52, 41, 48, 0.5);
+  padding: 50px;
 }
 
 #footer{
-	    background: #f8f8f8;
+	    background: #f5f5f5;
     padding: 4em 0 6em 0;
 }
 .legals{
@@ -73,7 +73,7 @@ body{
 	color: #999;
 }
 .wrapper.style2 {
-    background: #192024;
+    background: #342930;
     color: #c5c7c8;
 }
 .box{
@@ -90,7 +90,7 @@ body{
 	background: #e1e1e1;
 }
 .m-gray{
-	background: #515151;
+	background: #5E5351;
 }
 .m-white:hover{
 	background: #ccc;
@@ -130,7 +130,7 @@ body{
 	display: inline-block;
 	margin: 0 0 1.2em 0;
 	color: #ffffff;
-	background: #629DD1;
+	background: #90ADD5;
 	width: 2.5em;
 	height: 2.5em;
 	font-size: 1.5em;
@@ -144,7 +144,11 @@ body{
 }
 
 input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special {
-  background-color: #629DD1;
+  background-color: #90ADD5;
+  color: #ffffff !important;
+}
+input[type="submit"].special:hover, input[type="reset"].special:hover, input[type="button"].special:hover, .button.special:hover {
+  background-color: #5576A6;
   color: #ffffff !important;
 }
 input[type="submit"].big, input[type="reset"].big, input[type="button"].big, .button.big {
