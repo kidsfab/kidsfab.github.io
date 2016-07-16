@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=yes,initial-scale=1">
+    <title>SnapBrain - Введение</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="Arduino-модель для конструктора Знаток под названием SnapBrain">
+    <meta name="keywords" content="arduino, snap, знаток">
+    <script src="../../scripts/zepto.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../../styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/mobile.css" media="only screen and (min-width:640px)">
+    <link rel="stylesheet" type="text/css" href="../../styles/phablet.css" media="only screen and (min-width:800px)">
+    <link rel="stylesheet" type="text/css" href="../../styles/tablet.css" media="only screen and (min-width:1024px)">
+    <link rel="stylesheet" type="text/css" href="../../styles/desktop.css" media="only screen and (min-width:1200px)">
+    <link rel="stylesheet" type="text/css" href="../../styles/widescreen.css" media="only screen and (min-width:1600px)">
+
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80189900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <script>
+          var submitted=false;
+    </script>
+</head>
+<body >
+  <header  class="topheader">
+    <h1><a href="#">SnapBrain</a></h1>
+		<nav id="nav">
+			<a href="http://snapbrain.ru#info">Общая информация</a>
+			<a href="http://snapbrain.ru#instructions">Методические пособия</a>
+			<a href="http://snapbrain.ru#form">Форма заказа</a>
+		</nav>
+	</header>
+
+		<!-- Banner -->
+
+	<section class="container wrapper">
+  	<header class="row ">
+			<h2 class="twelve columns">Методические пособия</h2>
+		</header>
+		<div class="row">
+					<article class="nine columns">
+						<h3>Введение</h3>
+                            <p>На задней панели модуля управления имеются отверстия для установки на основание макетной платы “Знаток”. Соединение выводов модуля управления и элементов схемы может осуществляться стандартными коннекторами конструктора “Знаток”.</p>
+                            <p>Цифровые входы/выходы:
+                            D3,D5,D6,D9 - обеспечивают два уровня напряжения 0 или 5В; Могут использоваться как выводы с широтно-импульсной модуляцией (0-255).</p>
+                            <p>Аналоговые входы/выходы:
+                            A2,A5 - используются для считывания напряжения с аналоговых датчиков (датчик света, датчик звука, датчик касания и.т.д). Выдают значение напряжения в градации от 0 - 1023, что по умолчанию соответствует 0 - 5 В.</p>
+                            <p>5V: данный вывод постоянно (не зависимо от программы) обеспечивает напряжением 5В и может быть использован для питания датчиков.</p>
+                            <p>GND и VIN: могут быть использованы для питания Arduino_nano батарейными блоками конструктора “Знаток”. В режиме программирования (подключение к компьютеру) питание осуществляется через USB кабель. </p>
+                            <p>
+                                <strong>Внимание!<strong>
+                                Не рекомендуется подавать более 50 мА нагрузки (подключать моторы постоянного тока, сервоприводы) на выводы(пины) модуля управления т.к. это может привести к неисправности Arduino_nano!
+                            </p>
+					</article>
+                    <section class="three columns">
+						<h3>Вам понадобится</h3>
+						<ol class="specs">
+							<li>
+                                Конструктор "Знаток"
+							</li>
+							<li>
+							  SpapBrain
+							</li>
+							<li>
+							 Компьютер
+							</li>
+
+						</ol>
+					</section>
+                    <article class="twelve columns">
+						<h3>Программирование в Snap4Arduino</h3>
+                        <p>Программирование платы управления Arduino_mind  на Snap4Arduino осуществляется при помощи библиотеки блоков znatok_block.xml, которая содержит следующие блоки:</p>
+                        <img src="1.png" align="center">
+                        <p>Включить ПИН № - осуществляет включение/выключение цифровых пинов. В качестве входных аргументов необходимо ввести номер пина (3,5,6 или 9) и установить режим работы “Истина/Ложь” => что соответствует подачи на пин 5 В либо 0.</p>
+                        <img src="2.png" align="center">
+                        <p>Напряжение на ПИН № - данный блок используется для подачи сигнала с ШИМ на цифровой пин. Входные аргументы: номер пина на который требуется подать сигнал с ШИМ (3,5,6 или 9) и параметр сигнала ШИМ (от 0 до 255).</p>
+                        <img src="3.png" align="center">
+                        <p>Значение ПИН № - блок предназначен для считывания напряжения с аналогового вывода. В качестве входного аргумента указывается номер аналогового вывода с которого необходимо считать напряжение (2 или 5).</p>
+                        <img src="4.png" align="center">
+                        <p>Пример: При нажатии на клавиатуре клавиши ”a” на плате Arduino_nano загорается светодиод. При нажатии клавиши ”f” светодиод гаснет.</p>
+                        <img src="5.png" align="center">
+					</article>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+<footer id="footer" >
+  <div class="container">
+		<div class="row double ">
+			<div class="six columns">
+				<h2>Как нас поддержать?</h2>
+				<p>Если вам понравилось что мы делаем, вы можете нас поддержать рублем и словом. Вы можете вступить в наше сообщество, рассказать о SnapBrain друзьям и/или перевести нам на Яндекс.Деньги небольшую сумму.</p>
+				<nav class="socials">
+					<a href="https://vk.com/kidsfab" class="icon fa-vk"><span class="label">VK</span></a>
+					<a href="www.facebook.com/kidsfabru" class="icon fa-facebook"><span class="label">Facebook</span></a>
+					<a href="https://www.youtube.com/channel/UCsO18Njek2SwOEjceYhzdAg" class="icon fa-youtube"><span class="label">Youtube</span></a>
+				</nav>
+			</div>
+      <div class="six columns">
+        <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=41001344326985&amp;quickpay=shop&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;writer=buyer&amp;targets-hint=&amp;default-sum=&amp;button m-white-text=04&amp;successURL=" width="450" height="194"></iframe>
+      </div>
+		</div>
+		<div class="legals">
+			<span>© SnapBrain by KidsFab. Санкт-Петербург, 2016 год.</span>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

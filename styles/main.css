@@ -83,6 +83,11 @@ body{
   padding: 3em 2em;
 
 }
+a.box{
+    text-decoration: none;
+    display: block;
+    color:inherit;
+}
 .box p{
   font-size: 12pt;
 }
