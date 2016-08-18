@@ -58,7 +58,7 @@
             <p>Для начала вам стоит собрать схему как на фотографии ниже.</p>
             <img src="rover-scheme.png">
 					</article>
-                    <section class="three columns">
+          <section class="three columns">
 						<h3>Вам понадобится</h3>
 						<ol class="specs">
 							<li>
@@ -78,16 +78,35 @@
           <article class="twelve columns">
 						<h3>Программирование ровера в Snap4Arduino</h3>
             <p>Для начала проверим работоспособность полученной схемы, для этого добавим блок "ВПЕРЕД" из группы блоков Движение и выставим ему значение, например 1 секунду.</p>
-            <p>Получившийся бок вставим в "Когда щелкнуть на <span style="color: rgb(31,195,4)">⚑</span>".</p>
+            <p>Получившийся блок вставим в "Когда щелкнуть на <span style="color: rgb(31,195,4)">⚑</span>".</p>
+            <img src="rover-move.png">
             <p>Готово - если все правильно, ваш ровер должен проехать указанное вами время и остановиться.</p>
             <iframe width="640" height="360" src="https://www.youtube.com/embed/A9sR_3lt1jk" frameborder="0" allowfullscreen></iframe>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/uBb-Ih5Vc3g" frameborder="0" allowfullscreen></iframe>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/v4rFFKxByzU" frameborder="0" allowfullscreen></iframe>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/ZD-lOcmLaNM" frameborder="0" allowfullscreen></iframe>
+            
+            
 					
 					</article>
-
-
+					<article class="twelve columns">
+						<h3>Подключение и программирование датчика света к SnapBrain</h3>
+            <p>Подключим датчик света к аналоговому входу А2</p>
+            <ol>
+            	<li>Добавим блоки Всегда, Говорить и Значение датчика №.</li>
+            	<li>Вставим "Значение датчика №" в блок "Говорить" и выберем 2(он соотвествует порту А2 на SnapBrain)</li>
+            	<li>Вставим получившийся блок в "Всегда <span style="color: rgb(255,0,0)">⟳</span>".</li>
+            </ol>
+            <img src="light-sensor.png">
+            <p>Готово - если все правильно, если все правильно, вы должны увидеть показания датчика света в окне.</p>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/A9sR_3lt1jk" frameborder="0" allowfullscreen></iframe>
+            
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/uBb-Ih5Vc3g" frameborder="0" allowfullscreen></iframe>
+            
+					
+					</article>
+						
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/v4rFFKxByzU" frameborder="0" allowfullscreen></iframe>
+           
+					
+					</article>
 				</div>
 			</div>
 		</div>
