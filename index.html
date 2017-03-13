@@ -32,6 +32,10 @@
 </script>
     <script>
           var submitted=false;
+	    var checkForm = function(){
+		    submitted = true
+	    }
+	    
     </script>
 </head>
 <body >
@@ -256,7 +260,7 @@
 						<button type="submit" id="ss-submit" name="submit"
 							class="g-recaptcha jfk-button m-white jfk-button m-white-action "
 							data-sitekey="6LcqyRgUAAAAANvF7TwNTPJEXfkXOQRHCmTBtwHR"
-							data-callback="if(submitted) {window.location='http://snapbrain.ru/pages/thanks';}">
+							data-callback="checkForm()">
 							Отправить
 						</button>	
 				</div>
