@@ -17,12 +17,11 @@
   <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width:1200px)">
   <link rel="stylesheet" type="text/css" href="styles/widescreen.css" media="only screen and (min-width:1600px)">
 	<script>
-          
-	  function checkForm(){
-		  document.getElementById("ss-form").submit();
-		   
-	    }
-	    
+	var submitted=false;	  	    
+	function checkForm(){
+	 document.getElementById("ss-form").submit();
+	 submitted = true;
+	} 
     </script>
 	<script src="scripts/zepto.min.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js' async defer></script>
@@ -182,7 +181,7 @@
 				<p>Мы только начали выпускать SnapBrain и количество моделей ограничено, а на их выпуск нужно время. Поэтому мы просим вас оставить свои контактные данные, что бы иметь представление сколько устройств нам нужно будет произвести и как с вами связаться.</p>
 			</div>
 		</header>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://snapbrain.ru/pages/thanks';}"></iframe>
 		<div class="row">
     	<div class="six columns">
       	<h2>Цена SnapBrain: 2000 рублей.</h2>
@@ -200,7 +199,7 @@
 		  </div>
 		</div>
 		<div class="six columns">
-			<form action="https://docs.google.com/forms/d/1aXhoA0lRXqG8SKWV2KTZQlCV369aTNPk-BvYNGf8x1w/formResponse" method="POST" id="ss-form" class="special box">
+			<form action="https://docs.google.com/forms/d/1aXhoA0lRXqG8SKWV2KTZQlCV369aTNPk-BvYNGf8x1w/formResponse" method="POST" target="hidden_iframe" id="ss-form" class="special box">
 				<div class="ss-form-question errorbox-good" role="listitem">
 					<div dir="auto" class="ss-item ss-item-required ss-text">
 						<div class="ss-form-entry">
@@ -267,7 +266,6 @@
 				</div>
         </form>
       </div>
-    </div>
   </div>
 </section>
 <section id="two" class=" wrapper style2">
